@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gil Cae Robotics — Building real robots & sharing the journey</title>
+  <meta name="description" content="Gil Cae Robotics: robotics, mechatronics and 3D printing projects, including a real-life Black Mirror Metalhead robot dog.">
+  <meta property="og:title" content="Gil Cae Robotics">
+  <meta property="og:description" content="Building real robots & sharing the journey.">
+  <meta property="og:image" content="https://i.ytimg.com/vi/T2xKE_Nm7zg/maxresdefault.jpg">
+  <link rel="icon" href="assets/img/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <img src="assets/img/profile.jpg" alt="" class="brand-avatar">
+        <span>GIL CAE <b>ROBOTICS</b></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#metalhead" data-i18n="nav.metalhead">Metalhead</a>
+        <a href="#videos" data-i18n="nav.videos">Videos</a>
+        <a href="#reels" data-i18n="nav.reels">Reels</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#support" class="nav-cta" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="nav-tools">
+        <button class="lang-btn" id="langBtn" aria-label="Switch language">PT</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="kicker mono" data-i18n="hero.kicker">Robotics · Mechatronics · 3D Printing</p>
+          <h1 data-i18n-html="hero.title">Building <span class="accent">real robots</span><br>& sharing the journey.</h1>
+          <p class="lead" data-i18n="hero.lead"></p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">See the projects</a>
+            <a href="https://www.youtube.com/@gilcaerobotics" target="_blank" rel="noopener" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-4.8.5-4.8s0-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>
+              <span data-i18n="hero.cta2">Watch on YouTube</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img src="https://i.ytimg.com/vi/T2xKE_Nm7zg/maxresdefault.jpg" alt="Metalhead robot dog">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <div class="hero-tag mono"><span class="dot"></span>METALHEAD // MARK I</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="stats" id="stats"></ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker mono" data-i18n="projects.kicker">// portfolio</p>
+            <h2 data-i18n="projects.title">Projects</h2>
+          </div>
+          <div class="filters" id="projectFilters">
+            <button class="chip active" data-filter="all" data-i18n="projects.all">All</button>
+            <button class="chip" data-filter="robotics" data-i18n="projects.robotics">Robotics</button>
+            <button class="chip" data-filter="music" data-i18n="projects.music">Music Tech</button>
+            <button class="chip" data-filter="games" data-i18n="projects.games">Games</button>
+          </div>
+        </div>
+        <div class="projects" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- METALHEAD TIMELINE -->
+    <section class="section section-alt" id="metalhead">
+      <div class="container">
+        <div class="section-head stacked">
+          <p class="kicker mono" data-i18n="meta.kicker">// flagship build</p>
+          <h2 data-i18n="meta.title">Metalhead: from screen to workbench</h2>
+          <p class="lead" data-i18n="meta.lead"></p>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker mono" data-i18n="videos.kicker">// youtube</p>
+            <h2 data-i18n="videos.title">All videos</h2>
+          </div>
+          <div class="filters" id="videoFilters">
+            <button class="chip active" data-filter="all" data-i18n="videos.all">All</button>
+            <button class="chip" data-filter="long" data-i18n="videos.long">Videos</button>
+            <button class="chip" data-filter="short" data-i18n="videos.short">Shorts</button>
+          </div>
+        </div>
+        <div class="videos" id="videoGrid"></div>
+        <div class="center">
+          <a href="https://www.youtube.com/@gilcaerobotics" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="videos.channel">Open the channel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REELS -->
+    <section class="section section-alt" id="reels">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker mono" data-i18n="reels.kicker">// instagram</p>
+            <h2 data-i18n="reels.title">Latest reels</h2>
+          </div>
+          <a href="https://www.instagram.com/gilcaerobotics/" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="reels.follow">Follow @gilcaerobotics</a>
+        </div>
+        <div class="reels" id="reelGrid"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about-photo">
+          <img src="assets/img/profile.jpg" alt="Gil Cae">
+        </div>
+        <div class="about-text">
+          <p class="kicker mono" data-i18n="about.kicker">// about</p>
+          <h2 data-i18n="about.title">Hi, I'm Gil.</h2>
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+          <h3 class="mono small-title" data-i18n="about.skills">Toolbox</h3>
+          <ul class="skills">
+            <li>3D Printing</li><li>Blender</li><li>CAD</li><li>ESP32</li><li>Servo Control</li>
+            <li>Inverse Kinematics</li><li>Simulation</li><li>LiDAR</li><li>Web Controllers</li><li>Game Dev</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="section" id="support">
+      <div class="container">
+        <div class="support">
+          <div>
+            <h2 data-i18n="support.title">Support the next robot</h2>
+            <p data-i18n="support.lead"></p>
+          </div>
+          <div class="support-actions">
+            <a href="http://beacons.ai/gilcaerobotics" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="support.cta">Support on Patreon</a>
+            <div class="socials">
+              <a href="https://www.instagram.com/gilcaerobotics/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8Zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.1-9.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@gilcaerobotics" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-4.8.5-4.8s0-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner mono">
+      <span>© <span id="year"></span> Gil Cae Robotics</span>
+      <span data-i18n="footer.made">Built with curiosity and servo motors.</span>
+    </div>
+  </footer>
+
+  <!-- Video modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-body" id="modalBody">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-player" id="modalPlayer"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
